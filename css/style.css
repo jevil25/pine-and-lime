@@ -64,6 +64,7 @@ body{
     margin-top: 0px;
     text-align: center;
     font-family:'AvenirLight';
+    font-weight: 1800;
 }
 
 .picsize{
@@ -77,7 +78,7 @@ body{
     height: 500px;
     margin-left: 40px;
     margin-top: 30px;
-    border-bottom-width: 130px;
+    border-bottom-width: 100px;
 }
 
 .fields{
@@ -86,6 +87,7 @@ body{
     bottom:500px;
     font-size: 40px;
     font-family: 'FuturaLight';
+    font-weight: bold;
 }
 
 .inputs{
@@ -101,4 +103,78 @@ body{
 
 .description{
     padding: 90px 120px;
+}
+
+.frametextleft{
+    position: relative;
+    bottom: 670px;
+    right:150px;
+    font-family: 'AvenirLight';
+    font-weight: bold;
+    text-align: center;
+}
+
+.frametextright{
+    position: relative;
+    bottom: 730px;
+    left: 455px;
+    font-weight: lighter;
+    color: #000000a1;
+}
+
+.framedate{
+    position: relative;
+    right:28px;
+    color:#000000;
+    font-weight: bold;
+    top:0px;
+}
+
+footer{
+    text-align: center;
+    background-color: #333333;
+    padding: 20px 500px;
+    margin-top: 80px;
+    color:white;
+    font-size: large;
+}
+
+.button{
+    background-color:yellow;
+    padding: 15px 25px;
+    position: relative;
+    bottom:20px;
+    left:15px;
+    border: transparent;
+    border-radius: 20px;
+    font-style: 'AvenirLight';
+    font-size: large;
+}
+
+.button1{
+    top:10px;
+}
+
+.button:hover{
+    color:red;
+    background-color: white;
+}
+
+.field1{
+    position: relative;
+    left:640px;
+    bottom:500px;
+    font-size: 35px;
+    font-family: 'AvenirLight';
+    font-weight: lighter;
+
+}
+
+.latitude{
+    position: relative;
+    left:auto;
+    right:85px;
+    color:#0000009d;
+    font-weight: bold;
+    top:0px;
 }

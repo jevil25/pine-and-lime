@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/99352e98c2.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/mustache.js"></script>
     <title>Pine and Lime</title>
 </head>
-<body>
+<body onload="start()">
     <div>
         <header id="nav">
             <ul>
@@ -28,13 +30,48 @@
         <div class="frame">
             <img src="/images/test-image.png" class="picsize">
             <div class="fields">
-                Date:<input type="date" class="inputs date"><br>
-                Latitude:<input type="number" class="inputs">°N<br>
-                Longitude:<input type="number" class="inputs">°W<br>
-                Title:<input type="text" class="inputs"><br>
-                Description:<textarea vaule=" " class="inputs description"></textarea><br>
+                Date:<input type="date" id="data1" class="inputs date"><br>
+                Latitude:<input type="number" id="data2" class="inputs" >°N<br>
+                Longitude:<input type="number" id="data3" class="inputs">°W<br>
+                Title:<input type="text" id="data4" class="inputs"><br>
+                Description:<textarea id="data5" class="inputs description"></textarea><br>
+                <input type="submit" class="button" onclick="sendData()">
+            </div>
+            <div class="frametextleft">
+                Sometimes all we need is a<br>little text to fill up space in a<br>description.
+            </div>
+            <div class="frametextright">
+                INDIA
+                <div class="latitude">
+
+                </div>
+                <div class="framedate">
+
+                </div>
             </div>
         </div>
+        <div class="result field1">
+
+        </div>
+        <footer>
+            Designed and built by Aaron Jevil Nazareth.<br>
+            contact:jevil257@gmail.com
+        </footer>
     </div>
+    <script id="template" type="x-tmpl-mustache">
+        Date: {{date}}<br>
+        Latitude: {{latitude}}<br>
+        Longitude: {{longitude}}<br>
+        Title: {{title}}<br>
+        Description: {{description}}<br>
+        <button class="button button1" onclick="resetData()">Reset</button
+    </script>
+    <script id="coordinate" type="x-tmpl-mustache">
+        {{latitude}}°N/{{longitude}}°W
+    </script>
+    <script id="newdate" type="x-tmpl-mustache">
+        {{date}}
+    </script>
 </body>
+<script src="https://unpkg.com/mustache@latest"></script>
 </html>
